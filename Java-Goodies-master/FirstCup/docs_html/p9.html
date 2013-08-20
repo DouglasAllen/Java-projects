@@ -1,0 +1,251 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- GenHTML@16097-->
+<head>
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=iso-8859-1">
+<title>Your First Cup: An Introduction to the Java EE Platform</title>
+<link rel="stylesheet" type="text/css" href="css/default.css">
+<!--stopindex-->
+</head>
+
+<body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"  class="a0v0">
+<a name="top"></a>
+
+<!-- BEGIN A1 COMPONENT V.0 -->
+<div class="a1">
+<div class="a1v0">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr valign="bottom">
+<td nowrap="nowrap">
+<span class="toolbarlinks">
+<a href="http://www.sun.com">sun.com</a>
+<a href="http://docs.sun.com/" class="dividelink">docs.sun.com</a>
+</span>
+</td><td align="right" nowrap="nowrap">
+<span class="toolbarlinks">
+<a href="http://www.sun.com/MySun/">My Sun</a>
+<a href="http://www.sun.com/worldwide/" class="dividelink">Worldwide Sites</a>
+</span>
+</td></tr>
+</table>
+</div>
+</div>
+<!-- END A1 COMPONENT V.0 -->
+
+<!-- BEGIN A2 COMPONENT V.0 -->
+<div class="a2" id="a2v0">
+<div class="cornerTL">
+<div class="cornerTR">
+<div class="cornerBL">
+<div class="cornerBR">
+<div class="a2topiclinks">
+<table cellpadding="1" cellspacing="0" border="0">
+<tr valign="bottom">
+<td><a href="http://www.sun.com/" title="Home Page"><img src="css/a.gif" alt="Home Page" width="104" height="58" border="0" class="sunlogo"></a></td><td><img src="css/a.gif" alt="" width="1" height="1" border="0" id="ip1"></td>
+<td class="navlinks" id="navlink1">
+<div>
+<a id="glink1" href="http://www.sun.com/products/">Products</a>
+</div>
+</td><td><img src="css/a.gif" alt="" width="1" height="1" border="0" id="ip2"></td>
+<td class="navlinks" id="navlink2">
+<div>
+<a id="glink2" href="http://www.sun.com/downloads/">Downloads</a>
+</div>
+</td><td><img src="css/a.gif" alt="" width="1" height="1" border="0" id="ip3"></td><td class="navlinks" id="navlink3">
+<div>
+<a id="glink3" href="http://www.sun.com/service/">Service &amp; Solutions</a>
+</div>
+</td><td><img src="css/a.gif" alt="" width="1" height="1" border="0" id="ip4"></td><td class="navlinks" id="navlink4">
+<div>
+<a id="glink4" href="http://www.sun.com/support/">Support</a>
+</div>
+</td><td><img src="css/a.gif" alt="" width="1" height="1" border="0" id="ip5"></td><td class="navlinks" id="navlink5">
+<div>
+<a id="glink5" href="http://www.sun.com/training/">Training</a>
+</div>
+</td><td><img src="css/a.gif" alt="" width="1" height="1" border="0" id="ip6"></td><td class="navlinks" id="navlink6">
+<div>
+<a id="glink6" href="http://research.sun.com/">Research</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+</div></div></div></div>
+</div>
+<!-- END A2 COMPONENT V.0 -->
+
+<!-- BEGIN BREADCRUMB -->
+<div id="breadcrumb">
+<A href="toc.html">Your First Cup: An Introduction to the Java EE Platform</A> <font color="red">&gt;&gt;</font> <nobr><A HREF="p5.html#gcrkp">3.&nbsp;&nbsp;Creating Your First Java EE Application</A></nobr> <font color="red">&gt;&gt;</font> <nobr><A HREF="p5.html#gcrkm">Coding the Example Application</A></nobr> <font color="red">&gt;&gt;</font> <nobr><A HREF="p8.html#gcrlt">Creating the Web Client</A></nobr>&nbsp;
+</div><br />
+<!-- END BREADCRUMB -->
+
+<!-- BEGIN WRAPPER TABLE, 1 COLUMN, MAIN -->
+<table border="0" cellpadding="0" cellspacing="10" width="100%">
+<tr><td width="100%" valign="top">
+<!-- BEGIN CENTRAL COLUMN COMPONENTS -->
+
+<!-- BEGIN PAGE CONTROL ROW -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr class="grey1"><td></td><td align="right"><A HREF="p8.html"><IMG BORDER="0" ALT="Previous" SRC="graphics/prev.gif"> Previous</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="toc.html">Contents</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="p10.html">Next <IMG BORDER="0" ALT="Next" SRC="graphics/next.gif"></A></td></tr>
+</table>
+<!-- END PAGE CONTROL ROW -->
+
+</td></tr>
+<tr><td width="100%" valign="top">
+<a name="skip2content"> </a>
+
+<!--startindex-->
+<div class="maincontent">
+<A NAME="gcrpf"></A><h4>Creating a Resource Bundle</h4>
+<p>In this section, we'll create the resource bundle that contains the
+static text and error messages used by the JSP pages. The <tt>firstcup</tt> client
+supports both English and Spanish locales. Therefore we need to create two
+properties files, each of which will contain the messages for one of the locales.</p>
+<A NAME="gcrrz"></A><p><IMG border="0" alt="Procedure" src="graphics/procedure.gif">Creating a Resource Bundle</p>
+<ol><li><p><b>Right-click <tt>firstcup-war</tt> in the Projects
+pane.</b></p></li>
+<li><p><b>Select New -> File/Folder from the popup menu.</b></p></li>
+<li><p><b>Select the Other category, then Properties File from the New File
+dialog.</b></p></li>
+<li><p><b>In the New Properties File dialog, enter <tt>WebMessages</tt> in
+the File Name field.</b></p></li>
+<li><p><b>In the Folder field, enter <tt>src/java/com/sun/firstcup/web</tt> as
+the location of the file.</b></p></li>
+<li><p><b>Click Finish.</b></p></li>
+<li><p><b>After NetBeans creates the properties file, enter the following
+messages or copy them from here to the file: </b></p><table cellpadding="4" border="1" cols="1" width="100%"><td><pre>Welcome=Hi. My name is Duke. Let us find out who is older -- You or me. 
+DukeIs=Duke is
+YearsOldToday=years old today.
+Instructions=Enter your birthday and click submit.
+YourBD=Your birthday
+Pattern=MM/dd/yyyy
+DateError=Please enter the date in the form MM/dd/yyyy.
+YouAre=You are 
+Year=year
+Years=years
+Older=older than Duke!
+Younger=younger than Duke!
+SameAge= the same age as Duke!
+Submit=Submit
+Back=Back</pre>
+</td></table><br><p>These messages will be referenced from the JSP pages.</p>
+</li>
+<li><p><b>Save the file by selecting File -> Save from the menu.</b></p></li>
+<li><p><b>To add the Spanish translations of the messages, copy the properties
+file <tt>WebMessages_es.properties</tt> from <tt>&lt;INSTALL>/firstcup/example/firstcup/firstcup-war/src/java/com/sun/firstcup/web</tt>to <tt>&lt;INSTALL>/firstcup/myexample/firstcup/firstcup-war/src/java/com/sun/firstcup/web</tt>.</b></p><p>You can create multiple properties files, each with
+a set of messages for a different locale. By storing localized static text
+and messages in resource bundles, you don't need to create a separate set
+of JSP pages for each locale.</p>
+</li>
+<li><p><b>Refresh the files in the application by selecting File ->
+Refresh All Files from the menu bar.</b></p></li>
+</ol><A NAME="gcrri"></A><h4>Configuring the Resource Bundle in the Configuration
+File</h4>
+<p>To make the resource bundle available to the application, you need to
+configure it in the configuration file, by performing the following task.</p>
+<A NAME="gcrqy"></A><p><IMG border="0" alt="Procedure" src="graphics/procedure.gif">Configuring the Resource Bundle</p>
+<ol><li><p><b>Expand the <tt>firstcup-war</tt> module in the Projects
+pane.</b></p></li>
+<li><p><b>Open the folders Web Pages -> WEB-INF.</b></p></li>
+<li><p><b>Double-click <tt>faces-config.xml</tt>.</b></p></li>
+<li><p><b>Before the end-tag of the <tt>faces-config</tt> element,
+add the following elements: </b></p><table cellpadding="4" border="1" cols="1" width="100%"><td><pre>&lt;application>
+	&lt;resource-bundle>
+		&lt;base-name>com.sun.firstcup.web.WebMessages&lt;/base-name>
+		&lt;var>bundle&lt;/var>
+	&lt;/resource-bundle>
+	&lt;locale-config>
+		&lt;default-locale>en&lt;/default-locale>
+		&lt;supported-locale>es&lt;/supported-locale>
+	&lt;/locale-config>
+&lt;/application></pre>
+</td></table><br><p> The <tt>base-name</tt> element of the <tt>resource-bundle</tt> element
+identifies the fully-qualified class name of the resource bundle. The <tt>var</tt> element identifies the name by which the JSP pages will reference
+the resource bundle. The <tt>locale-config</tt> element identifies
+the locales supported by the resource bundle.</p>
+</li>
+<li><p><b>Save the file by selecting File -> Save from the menu bar.</b></p></li>
+</ol><A NAME="gcslm"></A><h4>Adding a Dependency on the Enterprise Bean Module</h4>
+<p>The <tt>firstcup-war</tt> module depends on some classes in
+the <tt>firstcup-ejb</tt> module. You need to tell NetBeans that
+this dependency exists by performing the following task.</p>
+<A NAME="gcslu"></A><p><IMG border="0" alt="Procedure" src="graphics/procedure.gif">Adding a Dependency on the Enterprise Bean Module</p>
+<ol><li><p><b>Right-click the <tt>firstcup-war</tt> module in the
+Projects pane.</b></p></li>
+<li><p><b>Select Properties.</b></p></li>
+<li><p><b>Select Libraries from the Categories pane.</b></p></li>
+<li><p><b>Select Add Project.</b></p></li>
+<li><p><b>Navigate to <tt>&lt;INSTALL>/myexample/firstcup</tt>.</b></p></li>
+<li><p><b>Select the <tt>firstcup-ejb</tt> project.</b></p></li>
+<li><p><b>Click Add Project JAR Files.</b></p></li>
+<li><p><b>Make sure Build Required Projects is selected.</b></p></li>
+<li><p><b>Click OK.</b></p></li>
+</ol><A NAME="gcrqx"></A><h4>Creating the <tt>DukesBDay</tt> Managed
+Bean Class</h4>
+<p>The <tt>DukesBDay</tt> JavaBeans component is a backing bean.
+A backing bean is a JavaServer Faces managed bean that acts as a temporary
+data storage for the values of the components included on a particular JavaServer
+Faces page. A managed bean is a JavaBeans component that a JavaServer Faces
+application instantiates and stores in scope. The section following this one
+describes more about managed beans and how to configure them.</p>
+<p>This section describes how to create the <tt>DukesBDay</tt> class.
+To create the class you need to do the following:</p>
+<ul><li><p>Create an empty class.</p>
+</li>
+<li><p>Decorate the bean with a web service reference and an enterprise
+bean reference.</p>
+</li>
+<li><p>Add a property that accesses Duke's current age from the web
+service.</p>
+</li>
+<li><p>Add a property that accesses the user's current birth date.</p>
+</li>
+<li><p>Add a property that accesses the age difference from the <tt>DukesBirthdayBean</tt> enterprise bean.</p>
+</li>
+<li><p>Add a property that acceses the absolute value of the age
+difference.</p>
+</li>
+</ul>
+<p></p>
+
+</div>
+<!--stopindex-->
+
+<!-- END CENTRAL COLUMN COMPONENTS -->
+</td></tr>
+
+<!-- BEGIN SPACER ROW -->
+<tr><td><img src="css/a.gif" width="780" height="1" border="0" alt="" /></td></tr>
+<!-- END SPACER ROW -->
+
+<tr><td>
+
+<!-- BEGIN PAGE CONTROL ROW -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr class="suntab"><td></td><td align="right"><A HREF="p8.html"><IMG BORDER="0" ALT="Previous" SRC="graphics/prev.gif"> Previous</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="toc.html">Contents</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="p10.html">Next <IMG BORDER="0" ALT="Next" SRC="graphics/next.gif"></A></td></tr>
+</table>
+<!-- END PAGE CONTROL ROW -->
+</td></tr>
+
+</table>
+<!-- END WRAPPER TABLE, 1 COLUMN, MAIN -->
+
+
+<!-- BEGIN A5 COMPONENT V.0 -->
+<div class="a5" id="a5v0">
+<span class="footerlinks">
+<a href="http://www.sun.com/company/">Company Info</a>
+<a href="http://www.sun.com/contact/">Contact</a>
+<a href="http://www.sun.com/share/text/termsofuse.html">Terms of Use</a>
+<a href="http://www.sun.com/privacy/">Privacy</a>
+
+<span class="footercopy">Copyright 1994-2006 Sun Microsystems, Inc.</span>
+</span>
+</div>
+<!-- END A5 COMPONENT V.0 -->
+
+</body>
+</html>
+

@@ -1,0 +1,8 @@
+Just look in the build.xml and you will see the various targets.
+These you may run from command line with
+> ant run
+> ant compile
+> ant jar
+> ant clean
+
+ 

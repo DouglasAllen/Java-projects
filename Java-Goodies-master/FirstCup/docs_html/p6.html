@@ -1,0 +1,232 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- GenHTML@16097-->
+<head>
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=iso-8859-1">
+<title>Your First Cup: An Introduction to the Java EE Platform</title>
+<link rel="stylesheet" type="text/css" href="css/default.css">
+<!--stopindex-->
+</head>
+
+<body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0" bgcolor="#ffffff"  class="a0v0">
+<a name="top"></a>
+
+<!-- BEGIN A1 COMPONENT V.0 -->
+<div class="a1">
+<div class="a1v0">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr valign="bottom">
+<td nowrap="nowrap">
+<span class="toolbarlinks">
+<a href="http://www.sun.com">sun.com</a>
+<a href="http://docs.sun.com/" class="dividelink">docs.sun.com</a>
+</span>
+</td><td align="right" nowrap="nowrap">
+<span class="toolbarlinks">
+<a href="http://www.sun.com/MySun/">My Sun</a>
+<a href="http://www.sun.com/worldwide/" class="dividelink">Worldwide Sites</a>
+</span>
+</td></tr>
+</table>
+</div>
+</div>
+<!-- END A1 COMPONENT V.0 -->
+
+<!-- BEGIN A2 COMPONENT V.0 -->
+<div class="a2" id="a2v0">
+<div class="cornerTL">
+<div class="cornerTR">
+<div class="cornerBL">
+<div class="cornerBR">
+<div class="a2topiclinks">
+<table cellpadding="1" cellspacing="0" border="0">
+<tr valign="bottom">
+<td><a href="http://www.sun.com/" title="Home Page"><img src="css/a.gif" alt="Home Page" width="104" height="58" border="0" class="sunlogo"></a></td><td><img src="css/a.gif" alt="" width="1" height="1" border="0" id="ip1"></td>
+<td class="navlinks" id="navlink1">
+<div>
+<a id="glink1" href="http://www.sun.com/products/">Products</a>
+</div>
+</td><td><img src="css/a.gif" alt="" width="1" height="1" border="0" id="ip2"></td>
+<td class="navlinks" id="navlink2">
+<div>
+<a id="glink2" href="http://www.sun.com/downloads/">Downloads</a>
+</div>
+</td><td><img src="css/a.gif" alt="" width="1" height="1" border="0" id="ip3"></td><td class="navlinks" id="navlink3">
+<div>
+<a id="glink3" href="http://www.sun.com/service/">Service &amp; Solutions</a>
+</div>
+</td><td><img src="css/a.gif" alt="" width="1" height="1" border="0" id="ip4"></td><td class="navlinks" id="navlink4">
+<div>
+<a id="glink4" href="http://www.sun.com/support/">Support</a>
+</div>
+</td><td><img src="css/a.gif" alt="" width="1" height="1" border="0" id="ip5"></td><td class="navlinks" id="navlink5">
+<div>
+<a id="glink5" href="http://www.sun.com/training/">Training</a>
+</div>
+</td><td><img src="css/a.gif" alt="" width="1" height="1" border="0" id="ip6"></td><td class="navlinks" id="navlink6">
+<div>
+<a id="glink6" href="http://research.sun.com/">Research</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+</div></div></div></div>
+</div>
+<!-- END A2 COMPONENT V.0 -->
+
+<!-- BEGIN BREADCRUMB -->
+<div id="breadcrumb">
+<A href="toc.html">Your First Cup: An Introduction to the Java EE Platform</A> <font color="red">&gt;&gt;</font> <nobr><A HREF="p5.html#gcrkp">3.&nbsp;&nbsp;Creating Your First Java EE Application</A></nobr> <font color="red">&gt;&gt;</font> <nobr><A HREF="p5.html#gcrkm">Coding the Example Application</A></nobr>&nbsp;
+</div><br />
+<!-- END BREADCRUMB -->
+
+<!-- BEGIN WRAPPER TABLE, 1 COLUMN, MAIN -->
+<table border="0" cellpadding="0" cellspacing="10" width="100%">
+<tr><td width="100%" valign="top">
+<!-- BEGIN CENTRAL COLUMN COMPONENTS -->
+
+<!-- BEGIN PAGE CONTROL ROW -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr class="grey1"><td></td><td align="right"><A HREF="p5.html"><IMG BORDER="0" ALT="Previous" SRC="graphics/prev.gif"> Previous</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="toc.html">Contents</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="p7.html">Next <IMG BORDER="0" ALT="Next" SRC="graphics/next.gif"></A></td></tr>
+</table>
+<!-- END PAGE CONTROL ROW -->
+
+</td></tr>
+<tr><td width="100%" valign="top">
+<a name="skip2content"> </a>
+
+<!--startindex-->
+<div class="maincontent">
+<A NAME="gcrkn"></A><h3>Creating the Web Service Endpoint</h3>
+<p>The <tt>DukesAgeService</tt> endpoint is a simple web service.
+Web services are web-based applications that use open, XML-based standards
+and transport protocols to exchange data with calling clients. Both the requests
+and responses are sent as XML documents, and are usually sent as HTTP packets.
+This makes interoperability between different systems and applications easy,
+as it is not necessary for the client to know the underlying architecture
+of the server and vice-versa to make a successful web service call. </p>
+<p>Web services are designed to be independent of the client. Typically
+web service endpoints are publicly available to a wide variety of clients,
+and the clients are located throughout the internet. This is called "loose
+coupling," as the clients and servers are connected only by the standard
+XML-based requests and responses. For this reason, <tt>DukesAgeService</tt> will
+be developed in its own application module, and deployed separately from the <tt>DukesBirthdayBean</tt> enterprise bean and <tt>firstcup</tt> web
+client.</p>
+<A NAME="gcrom"></A><h4>JAX-WS Endpoints</h4>
+<p><tt>DukesAgeService</tt> is a JAX-WS endpoint implemented
+as a servlet. Servlets are web components that run in the web container.</p>
+<p>We'll begin by creating a servlet class, then decorate the class with
+the <tt>@WebService</tt>annotation to make the class a web service
+endpoint, and finally we will add the <tt>getDukesAge</tt> method
+to calculate and return Duke's age.</p>
+<A NAME="gcroi"></A><h4>Creating the Endpoint</h4>
+<p>In NetBeans or another editor, create a Java class source file called <tt>DukesAge.java</tt> in the <tt>com.sun.firstcup.webservice</tt> package.</p>
+<A NAME="gcrpl"></A><p><IMG border="0" alt="Procedure" src="graphics/procedure.gif">Create the Project in NetBeans</p>
+<ol><li><p><b>Select File->New Project.</b></p></li>
+<li><p><b>Select Web in the Categories pane.</b></p></li>
+<li><p><b>Select Web Application in the Projects pane.</b></p></li>
+<li><p><b>Click Next.</b></p></li>
+<li><p><b>Set Project Name to <tt>firstcup-dukes-age</tt>.</b></p></li>
+<li><p><b>Set the Project Location to <tt>&lt;INSTALL>/myexample</tt>,
+in which INSTALL is the location of the <tt>firstcup</tt> tutorial
+installation.</b></p></li>
+<li><p><b>Select your Application Server from the Server menu.</b></p></li>
+<li><p><b>Select Java EE 5 from the Java EE Version menu.</b></p></li>
+<li><p><b>Set Context Path to <tt>/DukesAgeService</tt></b></p></li>
+<li><p><b>Click Finish.</b></p><p>You should now see the module you created
+in the Projects pane. </p>
+</li>
+<li><p><b>From the Projects pane, right-click on the <tt>index.jsp</tt> file
+and select Delete. Click Yes in the dialog.</b></p></li>
+</ol><A NAME="gcrpp"></A><p><IMG border="0" alt="Procedure" src="graphics/procedure.gif">Create the <tt>DukesAge</tt> Class</p>
+<ol><li><p><b>Select File->New File.</b></p></li>
+<li><p><b>Make sure <tt>firstcup-dukes-age</tt> is selected in
+the Project menu.</b></p></li>
+<li><p><b>Select Java Classes in the Categories pane.</b></p></li>
+<li><p><b>Select Java Class in the File Types pane.</b></p></li>
+<li><p><b>Click Next.</b></p></li>
+<li><p><b>Set Class Name to <tt>DukesAge</tt>.</b></p></li>
+<li><p><b>Set Package to <tt>com.sun.firstcup.webservice</tt>.</b></p></li>
+<li><p><b>Click Finish.</b></p><p>You should now see the <tt>DukesAge.java</tt> file inside the <tt>com.sun.firstcup.webservice</tt> package
+in the Projects pane. The <tt>DukesAge.java</tt> file should also
+be open in the editor pane.</p>
+</li>
+</ol><A NAME="gcrpc"></A><p><IMG border="0" alt="Procedure" src="graphics/procedure.gif">Annotate the <tt>DukesAge</tt> Class as
+a Web Service</p>
+<ul><li><p><b>Add a <tt>@WebService</tt> annotation to the class.</b></p><table cellpadding="4" border="1" cols="1" width="100%"><td><pre>@WebService
+public class DukesAge {
+...
+}</pre>
+</td></table><br></li>
+</ul><A NAME="gcsxx"></A><p><IMG border="0" alt="Procedure" src="graphics/procedure.gif">Remove the Default Constructor</p>
+<ul><li><p><b>Highlight the following default constructor and delete it, as
+web service endpoints do not require a default constructor.</b></p><table cellpadding="4" border="1" cols="1" width="100%"><td><pre>public DukesAge() {
+}</pre>
+</td></table><br></li>
+</ul><A NAME="gcrpj"></A><p><IMG border="0" alt="Procedure" src="graphics/procedure.gif">Add the <tt>getDukesAge</tt> Method</p>
+<ol><li><p><b>Create a public <tt>getDukesAge</tt> method with a return
+type of <tt>int</tt>.</b></p><table cellpadding="4" border="1" cols="1" width="100%"><td><pre>public int getDukesAge() {
+}</pre>
+</td></table><br></li>
+<li><p><b>Add a <tt>@WebMethod</tt> annotation to <tt>getDukesAge</tt>.</b></p><table cellpadding="4" border="1" cols="1" width="100%"><td><pre>@WebMethod
+public int getDukesAge() {
+}</pre>
+</td></table><br></li>
+<li><p><b>Add the following code to <tt>getDukesAge</tt>:</b></p><table cellpadding="4" border="1" cols="1" width="100%"><td><pre>Calendar dukesBirthday = new GregorianCalendar(1995, Calendar.MAY, 23);
+Calendar now = Calendar.getInstance();
+
+int dukesAge = now.get(Calendar.YEAR) - dukesBirthday.get(Calendar.YEAR);
+dukesBirthday.add(Calendar.YEAR, dukesAge);
+
+if (now.before(dukesBirthday)) {
+	dukesAge--;
+}
+return dukesAge;</pre>
+</td></table><br></li>
+</ol><A NAME="gcrou"></A><p><IMG border="0" alt="Procedure" src="graphics/procedure.gif">Resolve the Import Statements</p>
+<ol><li><p><b>Right-click in the Editor.</b></p></li>
+<li><p><b>Select Fix Imports.</b></p></li>
+<li><p><b>In the Fix Imports dialog, choose the <tt>javax.jws.WebService</tt> package
+for the <tt>WebService</tt> class.</b></p></li>
+<li><p><b>Select File->Save from the menu to save the file.</b></p></li>
+</ol>
+</div>
+<!--stopindex-->
+
+<!-- END CENTRAL COLUMN COMPONENTS -->
+</td></tr>
+
+<!-- BEGIN SPACER ROW -->
+<tr><td><img src="css/a.gif" width="780" height="1" border="0" alt="" /></td></tr>
+<!-- END SPACER ROW -->
+
+<tr><td>
+
+<!-- BEGIN PAGE CONTROL ROW -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr class="suntab"><td></td><td align="right"><A HREF="p5.html"><IMG BORDER="0" ALT="Previous" SRC="graphics/prev.gif"> Previous</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="toc.html">Contents</A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="p7.html">Next <IMG BORDER="0" ALT="Next" SRC="graphics/next.gif"></A></td></tr>
+</table>
+<!-- END PAGE CONTROL ROW -->
+</td></tr>
+
+</table>
+<!-- END WRAPPER TABLE, 1 COLUMN, MAIN -->
+
+
+<!-- BEGIN A5 COMPONENT V.0 -->
+<div class="a5" id="a5v0">
+<span class="footerlinks">
+<a href="http://www.sun.com/company/">Company Info</a>
+<a href="http://www.sun.com/contact/">Contact</a>
+<a href="http://www.sun.com/share/text/termsofuse.html">Terms of Use</a>
+<a href="http://www.sun.com/privacy/">Privacy</a>
+
+<span class="footercopy">Copyright 1994-2006 Sun Microsystems, Inc.</span>
+</span>
+</div>
+<!-- END A5 COMPONENT V.0 -->
+
+</body>
+</html>
+
